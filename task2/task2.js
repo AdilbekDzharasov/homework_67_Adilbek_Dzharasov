@@ -10,12 +10,12 @@ function renderData(data) {
         let imgCharacter = `<img src="${data[i].img}" class="img">`
         imgCharacter.className = 'images';
 
-        let countryLink = $(document.createElement('a'));
-        countryLink.attr('href', 'character.html?id=' + data[i].char_id);
-        countryLink.text('Подробнее');
+        let linkCharacter = $(document.createElement('a'));
+        linkCharacter.attr('href', 'character.html?id=' + data[i].char_id);
+        linkCharacter.text('Подробнее');
 
         divCharacter.append(imgCharacter);
-        divCharacter.append(countryLink);
+        divCharacter.append(linkCharacter);
         container.append(divCharacter);
     }
 }
